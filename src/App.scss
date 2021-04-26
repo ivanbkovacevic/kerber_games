@@ -1,0 +1,52 @@
+@import './scss/variables';
+@import './scss/basics';
+@import './scss/square';
+@import './scss/container-square';
+
+input{
+  margin:5px;
+}
+
+.wraper{
+  padding: 100px;
+}
+.main-container{
+  display: flex;
+
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ border-radius: 1%;
+
+}
+
+.app-container{
+position: relative;
+ border-radius: 1%;
+  height: $pickture-size+5px;
+  width: $pickture-size+5px;
+  background-color: black;
+  
+}
+
+.img-container{
+  height: $pickture-size;
+  width: $pickture-size;
+  margin-top: 20px;
+ 
+}
+.original-image{
+  border: 2px solid black;
+  height: $pickture-size;
+  width: $pickture-size;
+}
+
+.my-form{
+ display: block;
+ width: $pickture-size;
+ flex: 1;
+  border: 2px solid green;
+  margin-bottom: 10px;
+  padding: 5px;
+ 
+}

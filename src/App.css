@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: white;
+}
+
+/* 
+////////////////PRE SET/////////////////////////// */
+.square {
+  height: 133px;
+  width: 133px;
+  margin-left: 3px;
+  margin-top: 3px;
+  border-radius: 3%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.square-11 {
+  margin-left: 0px;
+  height: 400px;
+  width: 400px;
+}
+
+.square-12 {
+  margin-left: -133px;
+  height: 400px;
+  width: 400px;
+}
+
+.square-13 {
+  margin-left: -266px;
+  height: 400px;
+  width: 400px;
+}
+
+.square-21 {
+  margin-left: 0px;
+  margin-top: -133px;
+  height: 400px;
+  width: 400px;
+}
+
+.square-22 {
+  margin-left: -133px;
+  margin-top: -133px;
+  height: 400px;
+  width: 400px;
+}
+
+.square-23 {
+  margin-left: -266px;
+  margin-top: -133px;
+  height: 400px;
+  width: 400px;
+}
+
+.square-31 {
+  margin-left: 0px;
+  margin-top: -266px;
+  height: 400px;
+  width: 400px;
+}
+
+.square-32 {
+  margin-left: -133px;
+  margin-top: -266px;
+  height: 400px;
+  width: 400px;
+}
+
+.square-empty {
+  -webkit-filter: brightness(0%);
+          filter: brightness(0%);
+  border: none;
+  margin: 1px;
+}
+
+.show {
+  -webkit-animation-name: showing;
+          animation-name: showing;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes showing {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes showing {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.container-square-11 {
+  top: 0;
+  left: 0;
+  outline: 1px;
+  border-radius: 6%;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 9;
+}
+
+.container-square-12 {
+  top: 0;
+  left: 133px;
+  border-radius: 6%;
+  position: absolute;
+  border: 1px solid black;
+  z-index: 9;
+}
+
+.container-square-13 {
+  top: 0;
+  left: 266px;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 6%;
+  z-index: 9;
+}
+
+.container-square-21 {
+  top: 133px;
+  left: 0;
+  border-radius: 6%;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 9;
+}
+
+.container-square-22 {
+  top: 133px;
+  left: 133px;
+  position: absolute;
+  border-radius: 6%;
+  border: 1px solid black;
+  z-index: 9;
+}
+
+.container-square-23 {
+  top: 133px;
+  left: 266px;
+  position: absolute;
+  border-radius: 6%;
+  border: 1px solid black;
+  z-index: 9;
+}
+
+.container-square-31 {
+  top: 266px;
+  left: 0;
+  position: absolute;
+  border-radius: 6%;
+  border: 1px solid black;
+  z-index: 9;
+}
+
+.container-square-32 {
+  top: 266px;
+  left: 133px;
+  position: absolute;
+  border-radius: 6%;
+  border: 1px solid black;
+  z-index: 9;
+}
+
+.container-square-empty {
+  top: 266px;
+  left: 266px;
+  position: absolute;
+  border-radius: 6%;
+  border: 1px solid black;
+  z-index: 1;
+}
+
+.win {
+  mix-blend-mode: lighten;
+  -webkit-animation: winAnim 1s linear infinite;
+          animation: winAnim 1s linear infinite;
+}
+
+@-webkit-keyframes winAnim {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes winAnim {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+input {
+  margin: 5px;
+}
+
+.wraper {
+  padding: 100px;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1%;
+}
+
+.app-container {
+  position: relative;
+  border-radius: 1%;
+  height: 405px;
+  width: 405px;
+  background-color: black;
+}
+
+.img-container {
+  height: 400px;
+  width: 400px;
+  margin-top: 20px;
+}
+
+.original-image {
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
+}
+
+.my-form {
+  display: block;
+  width: 400px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 2px solid green;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+/*# sourceMappingURL=App.css.map */
