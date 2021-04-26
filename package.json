@@ -2,7 +2,7 @@
   "name": "kerber_games",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ivanbkovacevic.github.io/Puzzle",
+  "homepage": "https://ivanbkovacevic.github.io/kerber_games",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
